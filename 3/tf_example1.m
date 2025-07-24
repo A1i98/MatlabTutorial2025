@@ -1,0 +1,6 @@
+num1 = [5];
+den1 = [1, 2];
+G1 = tf(num1, den1);
+disp('????? ???? ???:');
+printsys(num1, den1, 's');
+disp(G1);

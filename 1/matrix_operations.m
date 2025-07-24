@@ -1,0 +1,9 @@
+A = [1 2; 3 4];
+B = [5 6; 7 8];
+C_sum = A + B;
+C_diff = A - B;
+C_mult = A * B;
+C_elem_mult = A .* B;
+A_transpose = A';
+A_inverse = inv(A);
+A_determinant = det(A);

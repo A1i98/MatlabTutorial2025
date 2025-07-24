@@ -1,0 +1,10 @@
+M = [1 2 3; 4 5 6; 7 8 9];
+s = size(M);
+l = length(M);
+col_sum = sum(M);
+row_mean = mean(M, 2);
+d = diag(M);
+I = eye(3);
+Z = zeros(2, 3);
+O = ones(3, 2);
+R = rand(1, 5);

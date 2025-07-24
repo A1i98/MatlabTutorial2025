@@ -1,0 +1,11 @@
+new_system('step_response_model');
+open_system('step_response_model');
+add_block('simulink/Sources/Step', 'step_response_model/Step');
+set_param('step_response_model/Step', 'StepTime', '1', 'InitialValue', '0', 'FinalValue', '1');
+add_block('simulink/Continuous/Transfer Fcn', 'step_response_model/Transfer Fcn');
+set_param('step_response_model/Transfer Fcn', 'Numerator', '[4]', 'Denominator', '[1 2 4]');
+add_block('simulink/Sinks/Scope', 'step_response_model/Scope');
+add_line('step_response_model', 'Step/1', 'Transfer Fcn/1', 'autorouting', 'on');
+add_line('step_response_model', 'Transfer Fcn/1', 'Scope/1', 'autorouting', 'on');
+set_param('step_response_model', 'StopTime', '10');
+sim('step_response_model');
